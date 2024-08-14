@@ -1,3 +1,0 @@
-/home/pedro/Projects/fatec/primeiroAno/ed/binarios/ptp/cmake-build-debug/CMakeFiles/ptp.dir
-/home/pedro/Projects/fatec/primeiroAno/ed/binarios/ptp/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/pedro/Projects/fatec/primeiroAno/ed/binarios/ptp/cmake-build-debug/CMakeFiles/rebuild_cache.dir
