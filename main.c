@@ -3,35 +3,12 @@
 #include <unistd.h>
 #include "ptpop.h"
 
-#define RESET   "\x1B[0m"
-#define MAGENTA "\x1B[35m"
-#define CYAN    "\x1B[36m"
-
 int main(void)
 {
     patient *p = malloc(sizeof(patient));
-    create(NULL, p);
-    free(p);
-    return 99;
-    string filePath = malloc(sizeof(char) * 2096);
-    string cwd = malloc(sizeof(char) * 2048);
-    cwd = getcwd(cwd, 2048);
 
-
-    if(cwd == NULL) {
-        printf("Working directory univalible \n");
-        free(filePath);
-        free(cwd);
-        return 1;
-    }
-
-    snprintf(filePath, 4096, "%s/data.bin", cwd);
-
-    FILE *data = fopen(filePath, "ab");
-
-    free(filePath);
-    free(cwd);
-
+    system("clear");
+    printf("\n");
     printf(CYAN" ██████╗ ████████╗██████╗ \n");
     printf(" ██╔══██╗╚══██╔══╝██╔══██╗\n");
     printf(" ██████╔╝   ██║   ██████╔╝\n");
@@ -62,6 +39,7 @@ int main(void)
 
         switch (opt) {
             case '1':
+                create(p);
                 break;
 
             case '2':
@@ -71,6 +49,8 @@ int main(void)
                 break;
 
             case '4':
+                printf("teste: %p\n", data);
+                list();
                 break;
 
             case '0':
@@ -80,5 +60,7 @@ int main(void)
         }
         getc(stdin);
     }
+
+    free(p);
     return 0;
 }
